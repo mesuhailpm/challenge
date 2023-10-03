@@ -4,7 +4,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      padding:{
+        '19' : '4.75rem'
+      },
+      fontFamily:{
+        'ralway': ['Raleway', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }
