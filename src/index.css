@@ -1,8 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 body {
   margin: 0;
@@ -10,7 +8,11 @@ body {
 
 /*  Custom styles */
 
-nav{
+svg {
+  display: none;
+}
+
+nav {
   background-color: rgba(245, 245, 245, 0.7);
   padding: 0 76px;
   width: 1440px;
@@ -19,7 +21,7 @@ nav{
 
   /* border: solid 1px ; */
 }
-.nav-inner-container{
+.nav-inner-container {
   padding-top: 11px;
   max-width: 1228px;
   max-height: 78px;
@@ -29,17 +31,16 @@ nav{
   left: 76px;
   right: 119px;
 }
-.register{
-  background: #F47D31; 
+.register {
+  background: #f47d31;
   width: 129px;
   height: 56px;
   display: flex;
   border-radius: 12px;
-  
 }
-.link-button{
+.social-button {
   color: rgba(60, 60, 60, 1);
-  background-image: url('../src/assets/images/rectangle.png');
+  background-image: url("../src/assets/images/rectangle.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 38px;
@@ -49,8 +50,47 @@ nav{
   align-items: center;
 }
 
-button h4{
+button h4 {
   font-size: 18px;
   line-height: 20px;
-  color: #3C3C3C;
+  color: #3c3c3c;
+}
+
+/* Mobile device */
+
+/* Styles for screens with a maximum width of 767px (typical for mobile devices) */
+@media screen and (max-width: 567px) {
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .nav-inner-container {
+    position: static;
+    width: 100%;
+    min-width: 360px;
+    height: 60px;
+    padding: 0 0 0 21px;
+  }
+  .social,
+  .social-button,
+  .sections,
+  .register {
+    display: none;
+    border: 2px solid #f47d31;
+  }
+  svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo {
+    width: 72px;
+    height: 50px;
+  }
 }
